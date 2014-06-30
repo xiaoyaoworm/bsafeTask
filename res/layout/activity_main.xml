@@ -1,0 +1,124 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:clickable="false" >
+
+        <EditText
+            android:id="@+id/filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:focusable="true"
+            android:inputType="phone" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/filter"
+            android:layout_alignParentLeft="true"
+            android:text="@string/buttonMes" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88666666"
+        android:clickable="true" >
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:clickable="false"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:scaleType="center"
+            android:src="@drawable/closex" />
+
+        <ImageView
+            android:id="@+id/pointDown2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/fakeFilter"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@+id/fakeButton"
+            android:src="@drawable/blue_arrow_left" />
+
+        <EditText
+            android:id="@+id/fakeFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:focusable="false"
+            android:inputType="phone"
+            android:visibility="invisible" >
+        </EditText>
+
+        <Button
+            android:id="@+id/fakeButton"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/fakeFilter"
+            android:layout_alignParentLeft="true"
+            android:visibility="invisible" >
+        </Button>
+
+        <ImageView
+            android:id="@+id/pointDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/fakeButton"
+            android:layout_toRightOf="@+id/fakeButton"
+            android:src="@drawable/blue_arrow_left" />
+
+        <TextView
+            android:id="@+id/instruction1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/fakeButton"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/pointDown"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:text="@string/instructionMes1"
+            android:textColor="#00CBCB" />
+
+        <TextView
+            android:id="@+id/instruction2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/fakeButton"
+            android:layout_alignBottom="@+id/fakeButton"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/pointDown2"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:text="@string/instructionMes2"
+            android:textColor="#00CBCB" />
+    </RelativeLayout>
+
+</FrameLayout>
